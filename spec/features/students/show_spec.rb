@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Student Show Page' do
   describe 'As a User' do
-    describe 'When i visit the student show page' do
+    describe 'When I visit the student show page' do
       before(:each) do
         @jaren = Student.create!(name: "Jaren")
         @jamie = Student.create!(name: "Jamie")
@@ -24,8 +24,7 @@ RSpec.describe 'Student Show Page' do
       -name of each course the student is enrolled in\n
       -student's grade for each course" do
         visit student_path(@jaren)
-        save_and_open_page
-        
+
         expect(page).to have_content(@jaren.name)
         expect(page).to have_content("Enrolled Courses")
 
